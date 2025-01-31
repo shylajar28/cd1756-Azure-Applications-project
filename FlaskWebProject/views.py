@@ -30,6 +30,7 @@ def home():
 @app.route('/new_post', methods=['GET', 'POST'])
 @login_required
 def new_post():
+    app.logger.warning("Hello!")
     form = PostForm(request.form)
     if form.validate_on_submit():
         post = Post()
