@@ -89,7 +89,6 @@ def authorized():
     if request.args.get('code'):
         cache = _load_cache()
         # TODO: Acquire a token from a built msal app, along with the appropriate redirect URI
-        Replace result = None with this code:
         result = _build_msal_app(cache=cache).acquire_token_by_authorization_code(
             request.args.get('code'),
             scopes=Config.SCOPE,
